@@ -89,8 +89,6 @@ python ucs.py --file graph.csv --start A --goal D
 
 This project is for educational purposes.
 
-```
-
 ---
 
 

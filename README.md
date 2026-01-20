@@ -1,29 +1,97 @@
-How to run and use
-
-1. Install the pipenv package
-
-	pip install pipenv
-
-2. Verify
-
-	pipenv —version
 
 
-3. create and activate the enviornment
+---
 
-	Inside the project folder, do:
+````markdown
+# Uniform Cost Search (UCS)
 
-		pipenv shell
+This repository contains a Python implementation of **Uniform Cost Search** that works on a graph provided as a CSV file.
 
-4. As the Pipefile.lock exists so simply run the command
+---
 
-	pipenv install
+## Requirements
 
-How to use it
+- Python 3.8+
+- `pip`
 
-in the terminal type:
+---
 
-python ucs.py —file(path to graph csv) —start(your start node) —goal(your goal node) 
+## Environment Setup (Using Pipenv)
 
-That all you have to do
-<img width="451" height="688" alt="image" src="https://github.com/user-attachments/assets/8be0e11d-6b84-4efb-b6c1-14591e2b8bd2" />
+### 1. Install `pipenv`
+
+```bash
+pip install pipenv
+````
+
+### 2. Verify installation
+
+```bash
+pipenv --version
+```
+
+---
+
+## Create and Activate the Virtual Environment
+
+Navigate to the **project folder** and run:
+
+```bash
+pipenv shell
+```
+
+Since the `Pipfile.lock` already exists, install dependencies with:
+
+```bash
+pipenv install
+```
+
+---
+
+## How to Run the Program
+
+Use the following command in the terminal:
+
+```bash
+python ucs.py --file <path_to_graph_csv> --start <start_node> --goal <goal_node>
+```
+
+### Example
+
+```bash
+python ucs.py --file graph.csv --start A --goal D
+```
+
+---
+
+## Arguments Explained
+
+* `--file`
+  Path to the CSV file representing the graph (adjacency matrix).
+
+* `--start`
+  Start node (must exist in the CSV).
+
+* `--goal`
+  Goal node (must exist in the CSV).
+
+---
+
+## Notes
+
+* The CSV file must be a **square adjacency matrix**.
+* Row labels and column labels must match exactly.
+* Edge weights are used as costs for Uniform Cost Search.
+
+---
+
+## License
+
+This project is for educational purposes.
+
+```
+
+---
+
+
+
